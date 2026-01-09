@@ -1,0 +1,525 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> kubectl
+kubectl controls the Kubernetes cluster manager.
+
+ Find more information at: https://kubernetes.io/docs/reference/kubectl/
+
+Basic Commands (Beginner):
+  create          Create a resource from a file or from stdin
+  expose          Take a replication controller, service, deployment or pod and expose it as a new Kubernetes service
+  run             Run a particular image on the cluster
+  set             Set specific features on objects
+
+Basic Commands (Intermediate):
+  explain         Get documentation for a resource
+  get             Display one or many resources
+  edit            Edit a resource on the server
+  delete          Delete resources by file names, stdin, resources and names, or by resources and label selector
+
+Deploy Commands:
+  rollout         Manage the rollout of a resource
+  scale           Set a new size for a deployment, replica set, or replication controller
+  autoscale       Auto-scale a deployment, replica set, stateful set, or replication controller
+
+Cluster Management Commands:
+  certificate     Modify certificate resources
+  cluster-info    Display cluster information
+  top             Display resource (CPU/memory) usage
+  cordon          Mark node as unschedulable
+  uncordon        Mark node as schedulable
+  drain           Drain node in preparation for maintenance
+  taint           Update the taints on one or more nodes
+
+Troubleshooting and Debugging Commands:
+  describe        Show details of a specific resource or group of resources
+  logs            Print the logs for a container in a pod
+  attach          Attach to a running container
+  exec            Execute a command in a container
+  port-forward    Forward one or more local ports to a pod
+  proxy           Run a proxy to the Kubernetes API server
+  cp              Copy files and directories to and from containers
+  auth            Inspect authorization
+  debug           Create debugging sessions for troubleshooting workloads and nodes
+  events          List events
+
+Advanced Commands:
+  diff            Diff the live version against a would-be applied version
+  apply           Apply a configuration to a resource by file name or stdin
+  patch           Update fields of a resource
+  replace         Replace a resource by file name or stdin
+  wait            Experimental: Wait for a specific condition on one or many resources
+  kustomize       Build a kustomization target from a directory or URL
+
+Settings Commands:
+  label           Update the labels on a resource
+  annotate        Update the annotations on a resource
+  completion      Output shell completion code for the specified shell (bash, zsh, fish, or powershell)
+
+Subcommands provided by plugins:
+
+Other Commands:
+  api-resources   Print the supported API resources on the server
+  api-versions    Print the supported API versions on the server, in the form of "group/version"
+  config          Modify kubeconfig files
+  plugin          Provides utilities for interacting with plugins
+  version         Print the client and server version information
+
+Usage:
+  kubectl [flags] [options]
+
+Use "kubectl <command> --help" for more information about a given command.
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+PS C:\Users\HP> eksctl
+The official CLI for Amazon EKS
+
+Usage: eksctl [command] [flags]
+
+Commands:
+  eksctl anywhere                        EKS anywhere
+  eksctl associate                       Associate resources with a cluster
+  eksctl completion                      Generates shell completion scripts for bash, zsh or fish
+  eksctl create                          Create resource(s)
+  eksctl delete                          Delete resource(s)
+  eksctl deregister                      Deregister a non-EKS cluster
+  eksctl disassociate                    Disassociate resources from a cluster
+  eksctl drain                           Drain resource(s)
+  eksctl enable                          Enable features in a cluster
+  eksctl get                             Get resource(s)
+  eksctl help                            Help about any command
+  eksctl info                            Output the version of eksctl, kubectl and OS info
+  eksctl register                        Register a non-EKS cluster
+  eksctl scale                           Scale resources(s)
+  eksctl set                             Set values
+  eksctl unset                           Unset values
+  eksctl update                          Update resource(s)
+  eksctl upgrade                         Upgrade resource(s)
+  eksctl utils                           Various utils
+  eksctl version                         Output the version of eksctl
+
+Common flags:
+  -C, --color string   toggle colorized logs (valid options: true, false, fabulous) (default "true")
+  -d, --dumpLogs       dump logs to disk on failure if set to true
+  -h, --help           help for this command
+  -v, --verbose int    set log level, use 0 to silence, 4 for debugging and 5 for debugging with AWS debug logging (default 3)
+
+Use 'eksctl [command] --help' for more information about a command.
+
+
+For detailed docs go to https://eksctl.io/
+
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> aws confihure
+
+aws: [ERROR]: argument command: Found invalid choice 'confihure'
+
+Maybe you meant:
+
+  * configure
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+PS C:\Users\HP> aws configure
+AWS Access Key ID [****************23T7]:
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> eksctl create cluster --my-cluster-1187 --region ap-south1 --fargate
+Error: unknown flag: --my-cluster-1187
+PS C:\Users\HP> eksctl create cluster my-cluster-1187 --region ap-south1 --fargate
+Error: checking AWS STS access – cannot get role ARN for current session: operation error STS: GetCallerIdentity, https response error StatusCode: 0, RequestID: , request send failed, Post "https://sts.ap-south1.amazonaws.com/": dial tcp: lookup sts.ap-south1.amazonaws.com on 218.248.112.65:53: no such host
+PS C:\Users\HP> aws conigure
+
+aws: [ERROR]: argument command: Found invalid choice 'conigure'
+
+Maybe you meant:
+
+  * configure
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+PS C:\Users\HP> aws configure
+AWS Access Key ID [****************23T7]: xxxxxxxxxxxxxxxxxxxx
+AWS Secret Access Key [****************WB0h]: xxxxxxxxxxxxxxxxx
+Default region name [ap-south-1]: ap-south-1
+Default output format [json]: json
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> eksctl create cluster my-cluster-1187 --region ap-south1 --fargate
+Error: checking AWS STS access – cannot get role ARN for current session: operation error STS: GetCallerIdentity, https response error StatusCode: 0, RequestID: , request send failed, Post "https://sts.ap-south1.amazonaws.com/": dial tcp: lookup sts.ap-south1.amazonaws.com on 218.248.112.65:53: no such host
+PS C:\Users\HP> eksctl create cluster my-cluster-1187 --region ap-south-1 --fargate
+2026-01-09 11:07:58 [ℹ]  eksctl version 0.221.0
+2026-01-09 11:07:58 [ℹ]  using region ap-south-1
+2026-01-09 11:07:58 [ℹ]  setting availability zones to [ap-south-1a ap-south-1b ap-south-1c]
+2026-01-09 11:07:58 [ℹ]  subnets for ap-south-1a - public:192.168.0.0/19 private:192.168.96.0/19
+2026-01-09 11:07:58 [ℹ]  subnets for ap-south-1b - public:192.168.32.0/19 private:192.168.128.0/19
+2026-01-09 11:07:58 [ℹ]  subnets for ap-south-1c - public:192.168.64.0/19 private:192.168.160.0/19
+2026-01-09 11:07:58 [!]  Auto Mode will be enabled by default in an upcoming release of eksctl. This means managed node groups and managed networking add-ons will no longer be created by default. To maintain current behavior, explicitly set 'autoModeConfig.enabled: false' in your cluster configuration. Learn more: https://eksctl.io/usage/auto-mode/
+2026-01-09 11:07:58 [ℹ]  using Kubernetes version 1.32
+2026-01-09 11:07:58 [ℹ]  creating EKS cluster "my-cluster-1187" in "ap-south-1" region with Fargate profile
+2026-01-09 11:07:58 [ℹ]  if you encounter any issues, check CloudFormation console or try 'eksctl utils describe-stacks --region=ap-south-1 --cluster=my-cluster-1187'
+2026-01-09 11:07:58 [ℹ]  Kubernetes API endpoint access will use default of {publicAccess=true, privateAccess=false} for cluster "my-cluster-1187" in "ap-south-1"
+2026-01-09 11:07:58 [ℹ]  CloudWatch logging will not be enabled for cluster "my-cluster-1187" in "ap-south-1"
+2026-01-09 11:07:58 [ℹ]  you can enable it with 'eksctl utils update-cluster-logging --enable-types={SPECIFY-YOUR-LOG-TYPES-HERE (e.g. all)} --region=ap-south-1 --cluster=my-cluster-1187'
+2026-01-09 11:07:58 [ℹ]  default addons vpc-cni, kube-proxy, coredns, metrics-server were not specified, will install them as EKS addons
+2026-01-09 11:07:58 [ℹ]
+2 sequential tasks: { create cluster control plane "my-cluster-1187",
+    3 sequential sub-tasks: {
+        1 task: { create addons },
+        wait for control plane to become ready,
+        create fargate profiles,
+    }
+}
+2026-01-09 11:07:58 [ℹ]  building cluster stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:07:58 [ℹ]  deploying stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:08:29 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:08:59 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:09:59 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:10:59 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:11:59 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:12:59 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:14:00 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:15:00 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:16:00 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:17:00 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 11:17:02 [!]  recommended policies were found for "vpc-cni" addon, but since OIDC is disabled on the cluster, eksctl cannot configure the requested permissions; the recommended way to provide IAM permissions for "vpc-cni" addon is via pod identity associations; after addon creation is completed, add all recommended policies to the config file, under `addon.PodIdentityAssociations`, and run `eksctl update addon`
+2026-01-09 11:17:02 [ℹ]  creating addon: vpc-cni
+2026-01-09 11:17:02 [ℹ]  successfully created addon: vpc-cni
+2026-01-09 11:17:02 [ℹ]  creating addon: kube-proxy
+2026-01-09 11:17:03 [ℹ]  successfully created addon: kube-proxy
+2026-01-09 11:17:03 [ℹ]  creating addon: coredns
+2026-01-09 11:17:04 [ℹ]  successfully created addon: coredns
+2026-01-09 11:19:04 [ℹ]  creating Fargate profile "fp-default" on EKS cluster "my-cluster-1187"
+2026-01-09 11:20:10 [ℹ]  created Fargate profile "fp-default" on EKS cluster "my-cluster-1187"
+2026-01-09 11:20:41 [ℹ]  "coredns" is now schedulable onto Fargate
+2026-01-09 11:21:44 [ℹ]  "coredns" is now scheduled onto Fargate
+2026-01-09 11:21:44 [ℹ]  "coredns" pods are now scheduled onto Fargate
+2026-01-09 11:21:44 [ℹ]  waiting for the control plane to become ready
+2026-01-09 11:21:46 [✔]  saved kubeconfig as "C:\\Users\\HP\\.kube\\config"
+2026-01-09 11:21:46 [ℹ]  no tasks
+2026-01-09 11:21:46 [✔]  all EKS cluster resources for "my-cluster-1187" have been created
+2026-01-09 11:21:51 [ℹ]  creating addon: metrics-server
+2026-01-09 11:21:51 [ℹ]  successfully created addon: metrics-server
+2026-01-09 11:21:51 [✖]  kubectl not found, v1.10.0 or newer is required
+2026-01-09 11:21:51 [ℹ]  cluster should be functional despite missing (or misconfigured) client binaries
+2026-01-09 11:21:51 [✔]  EKS cluster "my-cluster-1187" in "ap-south-1" region is ready
+PS C:\Users\HP> aws eks update-kubeconfig --name my-cluster-1187 --region ap-south-1
+Added new context arn:aws:eks:ap-south-1:724772054637:cluster/my-cluster-1187 to C:\Users\HP\.kube\config
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> eksctl create fargateprofile --cluster my-cluster-1187 --region ap-south-1 --name alb-sample-app --namespace game-2048
+2026-01-09 11:28:49 [ℹ]  creating Fargate profile "alb-sample-app" on EKS cluster "my-cluster-1187"
+2026-01-09 11:30:59 [ℹ]  created Fargate profile "alb-sample-app" on EKS cluster "my-cluster-1187"
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> kubectl get pods -n game-2048
+No resources found in game-2048 namespace.
+PS C:\Users\HP> kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.5.4/docs/examples/2048/2048_full.yaml
+namespace/game-2048 created
+deployment.apps/deployment-2048 created
+service/service-2048 created
+ingress.networking.k8s.io/ingress-2048 created
+PS C:\Users\HP> kubectl get pods -n game-2048
+NAME                              READY   STATUS    RESTARTS   AGE
+deployment-2048-bdbddc878-bljtg   0/1     Pending   0          6s
+deployment-2048-bdbddc878-fw2l9   0/1     Pending   0          6s
+deployment-2048-bdbddc878-lrd25   0/1     Pending   0          6s
+deployment-2048-bdbddc878-nmhch   0/1     Pending   0          6s
+deployment-2048-bdbddc878-pk5j4   0/1     Pending   0          6s
+PS C:\Users\HP> kubectl get pods -n game-2048 -w
+NAME                              READY   STATUS    RESTARTS   AGE
+deployment-2048-bdbddc878-bljtg   0/1     Pending   0          10s
+deployment-2048-bdbddc878-fw2l9   0/1     Pending   0          10s
+deployment-2048-bdbddc878-lrd25   0/1     Pending   0          10s
+deployment-2048-bdbddc878-nmhch   0/1     Pending   0          10s
+deployment-2048-bdbddc878-pk5j4   0/1     Pending   0          10s
+deployment-2048-bdbddc878-nmhch   0/1     Pending   0          44s
+deployment-2048-bdbddc878-nmhch   0/1     ContainerCreating   0          45s
+deployment-2048-bdbddc878-fw2l9   0/1     Pending             0          47s
+deployment-2048-bdbddc878-fw2l9   0/1     ContainerCreating   0          47s
+deployment-2048-bdbddc878-pk5j4   0/1     Pending             0          47s
+deployment-2048-bdbddc878-pk5j4   0/1     ContainerCreating   0          48s
+deployment-2048-bdbddc878-bljtg   0/1     Pending             0          48s
+deployment-2048-bdbddc878-bljtg   0/1     ContainerCreating   0          48s
+deployment-2048-bdbddc878-nmhch   1/1     Running             0          50s
+deployment-2048-bdbddc878-lrd25   0/1     Pending             0          50s
+deployment-2048-bdbddc878-lrd25   0/1     ContainerCreating   0          51s
+deployment-2048-bdbddc878-fw2l9   1/1     Running             0          52s
+deployment-2048-bdbddc878-bljtg   1/1     Running             0          53s
+deployment-2048-bdbddc878-pk5j4   1/1     Running             0          54s
+deployment-2048-bdbddc878-lrd25   1/1     Running             0          56s
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> kubectl get svc -n game-2048
+NAME           TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+service-2048   NodePort   10.100.56.180   <none>        80:30753/TCP   2m19s
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> kubectl get ingress -n game-2048
+NAME           CLASS   HOSTS   ADDRESS   PORTS   AGE
+ingress-2048   alb     *                 80      3m19s
+PS C:\Users\HP> eksctl utils associate-iam-oidc-provider --cluster my-cluster-1187 --approve
+2026-01-09 11:41:41 [ℹ]  will create IAM Open ID Connect provider for cluster "my-cluster-1187" in "ap-south-1"
+2026-01-09 11:41:41 [✔]  created IAM Open ID Connect provider for cluster "my-cluster-1187" in "ap-south-1"
+PS C:\Users\HP> curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.11.0/docs/install/iam_policy.json
+
+cmdlet Invoke-WebRequest at command pipeline position 1
+Supply values for the following parameters:
+Uri:
+PS C:\Users\HP> Invoke-WebRequest `
+>> -Uri https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.11.0/docs/install/iam_policy.json `
+>> -OutFile iam_policy.json
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
+PS C:\Users\HP> aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
+
+An error occurred (EntityAlreadyExists) when calling the CreatePolicy operation: A policy called AWSLoadBalancerControllerIAMPolicy already exists. Duplicate names are not allowed.
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> eksctl create iamserviceaccount --cluster=my-cluster-1187 --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::724772054637:policy/AWSLoadBalancerControllerIAMPolicy --approve
+2026-01-09 11:55:52 [ℹ]  1 iamserviceaccount (kube-system/aws-load-balancer-controller) was included (based on the include/exclude rules)
+2026-01-09 11:55:52 [!]  serviceaccounts that exist in Kubernetes will be excluded, use --override-existing-serviceaccounts to override
+2026-01-09 11:55:52 [ℹ]  1 task: {
+    2 sequential sub-tasks: {
+        create IAM role for serviceaccount "kube-system/aws-load-balancer-controller",
+        create serviceaccount "kube-system/aws-load-balancer-controller",
+    } }2026-01-09 11:55:52 [ℹ]  building iamserviceaccount stack "eksctl-my-cluster-1187-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
+2026-01-09 11:55:52 [ℹ]  deploying stack "eksctl-my-cluster-1187-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
+2026-01-09 11:55:52 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
+2026-01-09 11:56:22 [ℹ]  waiting for CloudFormation stack "eksctl-my-cluster-1187-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
+2026-01-09 11:56:22 [ℹ]  created serviceaccount "kube-system/aws-load-balancer-controller"
+PS C:\Users\HP> eksctl create iamserviceaccount --cluster=my-cluster-1187 --namespace=kube-system --name=aws-load-balancer-controller --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::724772054637:policy/AWSLoadBalancerControllerIAMPolicy --approve
+2026-01-09 11:56:51 [ℹ]  1 existing iamserviceaccount(s) (kube-system/aws-load-balancer-controller) will be excluded
+2026-01-09 11:56:51 [ℹ]  1 iamserviceaccount (kube-system/aws-load-balancer-controller) was excluded (based on the include/exclude rules)
+2026-01-09 11:56:51 [!]  serviceaccounts that exist in Kubernetes will be excluded, use --override-existing-serviceaccounts to override
+2026-01-09 11:56:51 [ℹ]  no tasks
+PS C:\Users\HP> helm repo add eks https://aws.github.io/eks-charts
+"eks" already exists with the same configuration, skipping
+PS C:\Users\HP> helm repo update eks
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "eks" chart repository
+Update Complete. ⎈Happy Helming!⎈
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> helm install aws-load-balancer-controller eks aws-load-balancer-controller -n kube-system --set clusterName=my-cluster1187 --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller --set region=ap-south-1 --set vpcId=vpc-0a7a39af9ed39e556
+Error: INSTALLATION FAILED: expected at most two arguments, unexpected arguments: aws-load-balancer-controller
+PS C:\Users\HP> helm install aws-load-balancer-controller eks aws-load-balancer-controller -n kube-system --set clusterName=my-cluster-1187 --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller --set region=ap-south-1 --set vpcId=vpc-0a7a39af9ed39e556
+Error: INSTALLATION FAILED: expected at most two arguments, unexpected arguments: aws-load-balancer-controller
+PS C:\Users\HP> helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=my-cluster-1187 --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller --set region=ap-south-1 --set vpcId=vpc-0a7a39af9ed39e556
+NAME: aws-load-balancer-controller
+LAST DEPLOYED: Fri Jan  9 12:05:02 2026
+NAMESPACE: kube-system
+STATUS: deployed
+REVISION: 1
+DESCRIPTION: Install complete
+TEST SUITE: None
+NOTES:
+AWS Load Balancer controller installed!
+PS C:\Users\HP> kubectl get deployment -n kube-system aws-load-balancer-controller
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+aws-load-balancer-controller   2/2     2            2           73s
+PS C:\Users\HP> kubectl get pods -n kube-system -w
+NAME                                            READY   STATUS    RESTARTS   AGE
+aws-load-balancer-controller-64c4ccf9f9-56kt7   1/1     Running   0          4m32s
+aws-load-balancer-controller-64c4ccf9f9-756kq   1/1     Running   0          4m32s
+coredns-8448d8f9b5-k4qq9                        1/1     Running   0          48m
+coredns-8448d8f9b5-vv87c                        1/1     Running   0          48m
+metrics-server-6489f6d86b-4ftxt                 1/1     Running   0          47m
+metrics-server-6489f6d86b-kvb8s                 1/1     Running   0          47m
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> kubectl edit deploy/aws-load-balancer-controller -n kube-system
+PS C:\Users\HP>
+PS C:\Users\HP> kubectl get deploy -n kube-system
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+aws-load-balancer-controller   2/2     2            2           11m
+coredns                        2/2     2            2           59m
+metrics-server                 2/2     2            2           54m
+PS C:\Users\HP> kubectl get ingress -n game-2048
+NAME           CLASS   HOSTS   ADDRESS                                                                    PORTS   AGE
+ingress-2048   alb     *       k8s-game2048-ingress2-3b5b62b48d-1006798899.ap-south-1.elb.amazonaws.com   80      45m
+PS C:\Users\HP> kubectl delete ingress k8s-game2048-ingress2
+Error from server (NotFound): ingresses.networking.k8s.io "k8s-game2048-ingress2" not found
+PS C:\Users\HP> kubectl delete ingress ingress-2048 -n game-2048
+ingress.networking.k8s.io "ingress-2048" deleted from game-2048 namespace
+PS C:\Users\HP> kubectl get ingress -n game-2048
+No resources found in game-2048 namespace.
+PS C:\Users\HP> kubectl delete svc service-2048 -n game-2048
+service "service-2048" deleted from game-2048 namespace
+PS C:\Users\HP> kubectl get svc -n game-2048
+No resources found in game-2048 namespace.
+PS C:\Users\HP> kubectl delete deployment deployment-2048 -n game-2048
+deployment.apps "deployment-2048" deleted from game-2048 namespace
+PS C:\Users\HP> kubectl get pods -n game-2048
+No resources found in game-2048 namespace.
+PS C:\Users\HP> kubectl delete ns game-2048
+namespace "game-2048" deleted
+PS C:\Users\HP> kubectl get ns
+NAME              STATUS   AGE
+default           Active   92m
+kube-node-lease   Active   92m
+kube-public       Active   92m
+kube-system       Active   92m
+PS C:\Users\HP> helm uninstall aws-load-balancer-controller -n kube-system
+release "aws-load-balancer-controller" uninstalled
+PS C:\Users\HP> kubectl get pods -n kube-system
+NAME                              READY   STATUS    RESTARTS   AGE
+coredns-8448d8f9b5-k4qq9          1/1     Running   0          89m
+coredns-8448d8f9b5-vv87c          1/1     Running   0          89m
+metrics-server-6489f6d86b-4ftxt   1/1     Running   0          87m
+metrics-server-6489f6d86b-kvb8s   1/1     Running   0          87m
+PS C:\Users\HP> eksctl delete iamserviceaccount \
+Error: --cluster must be set
+PS C:\Users\HP>   --cluster my-cluster-1187 \
+At line:1 char:5
++   --cluster my-cluster-1187 \
++     ~
+Missing expression after unary operator '--'.
+At line:1 char:5
++   --cluster my-cluster-1187 \
++     ~~~~~~~
+Unexpected token 'cluster' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterOperator
+
+PS C:\Users\HP>   --namespace kube-system \
+At line:1 char:5
++   --namespace kube-system \
++     ~
+Missing expression after unary operator '--'.
+At line:1 char:5
++   --namespace kube-system \
++     ~~~~~~~~~
+Unexpected token 'namespace' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterOperator
+
+PS C:\Users\HP>   --name aws-load-balancer-controller
+At line:1 char:5
++   --name aws-load-balancer-controller
++     ~
+Missing expression after unary operator '--'.
+At line:1 char:5
++   --name aws-load-balancer-controller
++     ~~~~
+Unexpected token 'name' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterOperator
+
+PS C:\Users\HP> eksctl delete iamserviceaccount --cluster my-cluster-1187 --namespace kube-system --name aws-load-balancer-controller
+2026-01-09 12:51:48 [ℹ]  1 iamserviceaccount (kube-system/aws-load-balancer-controller) was included (based on the include/exclude rules)
+2026-01-09 12:51:49 [ℹ]  1 task: {
+    2 sequential sub-tasks: {
+        delete IAM role for serviceaccount "kube-system/aws-load-balancer-controller" [async],
+        delete serviceaccount "kube-system/aws-load-balancer-controller",
+    } }2026-01-09 12:51:49 [ℹ]  will delete stack "eksctl-my-cluster-1187-addon-iamserviceaccount-kube-system-aws-load-balancer-controller"
+2026-01-09 12:51:49 [ℹ]  deleted serviceaccount "kube-system/aws-load-balancer-controller"
+PS C:\Users\HP> eksctl get fargateprofile --cluster my-cluster-1187
+NAME            SELECTOR_NAMESPACE      SELECTOR_LABELS POD_EXECUTION_ROLE_ARN                                                                          SUBNETS                                                                             TAGS    STATUS
+alb-sample-app  game-2048               <none>          arn:aws:iam::724772054637:role/eksctl-my-cluster-1187-clus-FargatePodExecutionRole-dCamzRNghta8 subnet-08e9e2fa2de4b468a,subnet-0334e5dcb5e0623c2,subnet-05b1a53a2115baa1c  <none>  ACTIVE
+fp-default      default                 <none>          arn:aws:iam::724772054637:role/eksctl-my-cluster-1187-clus-FargatePodExecutionRole-dCamzRNghta8 subnet-08e9e2fa2de4b468a,subnet-0334e5dcb5e0623c2,subnet-05b1a53a2115baa1c  <none>  ACTIVE
+fp-default      kube-system             <none>          arn:aws:iam::724772054637:role/eksctl-my-cluster-1187-clus-FargatePodExecutionRole-dCamzRNghta8 subnet-08e9e2fa2de4b468a,subnet-0334e5dcb5e0623c2,subnet-05b1a53a2115baa1c  <none>  ACTIVE
+PS C:\Users\HP> eksctl delete fargateprofile --cluster my-cluster-1187 --name alb-sample-app
+2026-01-09 12:53:12 [ℹ]  deleted Fargate profile "alb-sample-app" on EKS cluster "my-cluster-1187"
+PS C:\Users\HP> eksctl delete fargateprofile --cluster my-cluster-1187 --name fp-default
+Error: failed to delete Fargate profile "fp-default": operation error EKS: DeleteFargateProfile, https response error StatusCode: 409, RequestID: 71c011b3-f9fd-446a-8ffd-b9d0afae073b, api error ResourceInUseException: Cannot Delete Fargate Profile fp-default because cluster my-cluster-1187 currently has Fargate profile alb-sample-app in status DELETING
+PS C:\Users\HP> eksctl delete cluster --name my-cluster-1187 --region ap-south-1
+2026-01-09 12:59:20 [ℹ]  deleting EKS cluster "my-cluster-1187"
+2026-01-09 12:59:20 [ℹ]  deleted 0 Fargate profile(s)
+2026-01-09 12:59:21 [✔]  kubeconfig has been updated
+2026-01-09 12:59:21 [ℹ]  cleaning up AWS load balancers created by Kubernetes objects of Kind Service or Ingress
+2026-01-09 12:59:23 [ℹ]
+2 sequential tasks: { delete IAM OIDC provider, delete cluster control plane "my-cluster-1187" [async]
+}
+2026-01-09 12:59:24 [ℹ]  will delete stack "eksctl-my-cluster-1187-cluster"
+2026-01-09 12:59:24 [✔]  all cluster resources were deleted
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP> eksctl get cluster
+No clusters found
+PS C:\Users\HP> kubectl get all -A
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+Unable to connect to the server: dial tcp: lookup 88CED8DB93481F5155C524B05ACAA56B.gr7.ap-south-1.eks.amazonaws.com: no such host
+PS C:\Users\HP> eksctl get cluster --region ap-south-1
+No clusters found
+PS C:\Users\HP> aws eks list-clusters --region ap-south-1
+PS C:\Users\HP> aws ec2 describe-nat-gateways --region ap-south-1
+PS C:\Users\HP> aws ec2 describe-nat-gateways --region ap-south-1 --clipager
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+Unknown options: --clipager
+
+PS C:\Users\HP> aws ec2 delete-nat-gateway --nat-gateway-id nat-0abc1234 --region ap-south-1
+
+An error occurred (NatGatewayMalformed) when calling the DeleteNatGateway operation: Invalid Nat Gateway nat-0abc1234
+PS C:\Users\HP> aws ec2 describe-nat-gateways --region ap-south-1
+PS C:\Users\HP> aws ec2 describe-network-interfaces
+PS C:\Users\HP> aws ec2 describe-network-interfaces --clinonpager
+
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+
+Unknown options: --clinonpager
+
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
+PS C:\Users\HP>
