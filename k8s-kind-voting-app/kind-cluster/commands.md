@@ -5,7 +5,7 @@
 
 - Clear terminal:
   ```bash
-  clear
+  clear 
   ```
 
 - Create a 3-node Kubernetes cluster using Kind:
