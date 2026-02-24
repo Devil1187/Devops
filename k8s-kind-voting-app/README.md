@@ -57,5 +57,7 @@ This project description emphasizes your role in leveraging AWS EC2, Kubernetes,
 
 ### Hariom Lokhandkar
 
-https://www.linkedin.com/in/hariom-lokhandkar
+www.linkedin.com/in/hariom-lokhandkar-00a00a252
+
+
 
