@@ -1,43 +1,92 @@
 <!DOCTYPE html>
 <html ng-app="catsvsdogs">
-  <head>
-    <meta charset="utf-8">
-    <title>Cats vs Dogs -- Result</title>
-    <base href="/index.html">
-    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
-    <meta name="keywords" content="docker-compose, docker, stack">
-    <meta name="author" content="Docker">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body ng-controller="statsCtrl" >
-     <div id="background-stats">
-       <div id="background-stats-1">
-       </div><!--
-      --><div id="background-stats-2">
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>Voting Result - DevOps Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="socket.io.js"></script>
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      margin-top: 80px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 5px;
+    }
+
+    .author {
+      color: #00e5ff;
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+
+    .card {
+      display: inline-block;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 15px;
+      width: 220px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .cats {
+      background: #ff6b6b;
+    }
+
+    .dogs {
+      background: #4dabf7;
+    }
+
+    .percent {
+      font-size: 42px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .votes {
+      margin-top: 40px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+
+<body ng-controller="statsCtrl">
+
+  <div class="container">
+    <h1>🐱 Cats vs Dogs 🐶</h1>
+
+    <!-- Your name shown here -->
+    <div class="author">DevOps Demo by <b>Hariom Lokhandkar</b></div>
+
+    <div class="card cats">
+      <h2>Cats</h2>
+      <div class="percent">{{aPercent | number:1}}%</div>
     </div>
-    <div id="content-container">
-      <div id="content-container-center">
-        <div id="choice">
-          <div class="choice cats">
-            <div class="label">Cats</div>
-            <div class="stat">{{aPercent | number:1}}%</div>
-          </div>
-          <div class="divider"></div>
-          <div class="choice dogs">
-            <div class="label">Dogs</div>
-            <div class="stat">{{bPercent | number:1}}%</div>
-          </div>
-        </div>
-      </div>
+
+    <div class="card dogs">
+      <h2>Dogs</h2>
+      <div class="percent">{{bPercent | number:1}}%</div>
     </div>
-    <div id="result">
+
+    <div class="votes">
       <span ng-if="total == 0">No votes yet</span>
       <span ng-if="total == 1">{{total}} vote</span>
       <span ng-if="total >= 2">{{total}} votes</span>
     </div>
-    <script src="socket.io.js"></script>
-    <script src="angular.min.js"></script>
-    <script src="app.js"></script>
-  </body>
+  </div>
+
+</body>
 </html>
